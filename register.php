@@ -8,8 +8,9 @@ session_start();
 include "db_connect.php";
 
 // Konfigurasi reCAPTCHA
-$RECAPTCHA_SITEKEY = "6LdSjAQsAAAAADIJzTSlgfKofN_3OreyRoVrKwnb";
-$RECAPTCHA_SECRET  = "6LdSjAQsAAAAAFw1ryuxXPFEj44tE9KQFk9SzqO0";
+// Konfigurasi reCAPTCHA
+$RECAPTCHA_SITEKEY = getenv('RECAPTCHA_SITEKEY');
+$RECAPTCHA_SECRET = getenv('RECAPTCHA_SECRET');
 
 // Fungsi bantu: dapatkan IP client
 function get_client_ip() {

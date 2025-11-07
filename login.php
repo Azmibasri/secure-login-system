@@ -13,8 +13,8 @@ ini_set('session.use_strict_mode', 1);
 session_start();
 
 // Konfigurasi reCAPTCHA - GANTI dengan keys milikmu
-$RECAPTCHA_SITEKEY = "6LdSjAQsAAAAADIJzTSlgfKofN_3OreyRoVrKwnb";
-$RECAPTCHA_SECRET = "6LdSjAQsAAAAAFw1ryuxXPFEj44tE9KQFk9SzqO0";
+$RECAPTCHA_SITEKEY = getenv('RECAPTCHA_SITEKEY');
+$RECAPTCHA_SECRET = getenv('RECAPTCHA_SECRET');
 
 // Fungsi bantu: dapatkan IP client (sederhana)
 function get_client_ip() {
